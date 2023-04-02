@@ -199,9 +199,8 @@ export default function PlaceOrderScreen() {
                 <li>
                   <button
                     disabled={loading}
-                    onClick={() => {
-                      placeOrderHandler()
-                    }}
+                    onClick={
+                      placeOrderHandler}
                     className="primary-button w-full"
                   >
                     {loading ? "Loading..." : "Place Order"}
