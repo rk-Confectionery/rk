@@ -34,39 +34,39 @@ export default function PlaceOrderScreen() {
 
   const [loading, setLoading] = useState(false);
 
-  // const header = {
-  //   headers: {
-  //     Authorization:
-  //       "Bearer EAAK3g3EM7g8BAKctddjP3dSCBTEoc5ygqrcMV79OsTyPUZBGF4RggjqjhGmBaATZA3hAUeydZC5EQH2YTvrtrWVrar8RUciWeksQ6ZAmwfoT7Pq9E9NyxF6oMJnYPb6XxaCCvcOScpyWWwLdo08cPtaCEN3EOaxpGmh44ctKgilrHmafNOucJIYqlh5IeEKimrnt1SjXuAZDZD",
-  //     Accept: "application/json",
-  //   },
-  // };
+  const header = {
+    headers: {
+      Authorization:
+        "Bearer EAAK3g3EM7g8BAKctddjP3dSCBTEoc5ygqrcMV79OsTyPUZBGF4RggjqjhGmBaATZA3hAUeydZC5EQH2YTvrtrWVrar8RUciWeksQ6ZAmwfoT7Pq9E9NyxF6oMJnYPb6XxaCCvcOScpyWWwLdo08cPtaCEN3EOaxpGmh44ctKgilrHmafNOucJIYqlh5IeEKimrnt1SjXuAZDZD",
+      Accept: "application/json",
+    },
+  };
 
-  // const sendMsg = () => {
-  //   const body = {
-  //     messaging_product: "whatsapp",
-  //     to: "917017830450",
-  //     type: "template",
-  //     template: {
-  //       name: "hello_world",
-  //       language: {
-  //         code: "en_US",
-  //       },
-  //     },
-  //   };
-  //   axios
-  //     .post(
-  //       "https://graph.facebook.com/v16.0/116141904768570/messages",
-  //       body,
-  //       header
-  //     )
-  //     .then((res) => {
-  //       console.log("message successfully send", res);
-  //     })
-  //     .catch((err) => {
-  //       console.log("error while sending message", err);
-  //     });
-  // };
+  const sendMsg = () => {
+    const body = {
+      messaging_product: "whatsapp",
+      to: "917017830450",
+      type: "template",
+      template: {
+        name: "hello_world",
+        language: {
+          code: "en_US",
+        },
+      },
+    };
+    axios
+      .post(
+        "https://graph.facebook.com/v16.0/116141904768570/messages",
+        body,
+        header
+      )
+      .then((res) => {
+        console.log("message successfully send", res);
+      })
+      .catch((err) => {
+        console.log("error while sending message", err);
+      });
+  };
 
   const placeOrderHandler = async () => {
     try {
